@@ -1,82 +1,14 @@
-<h2> Fabric Details</h2>
-<form>
-    <div>
-        <label>Customer: </label>
-        <input></input>
-    </div>
-    <div>
-        <label>Quality: </label>
-        <input></input>
-    </div>
-    <div>
-        <h3>Wrap Details:</h3>
-        <div>
-            <label>Count:</label>
-            <input>
-            <label>Rate(GST):</label>
-            <input>
-            <label>GST:</label>
-            <input>
-            <label>Rate:</label>
-            <input disabled>
-        </div>
-        <h3>Weft Details:</h3>
-        <div>
-            <label>Count:</label>
-            <input>
-            <label>Rate(GST):</label>
-            <input>
-            <label>GST:</label>
-            <input>
-            <label>Rate:</label>
-            <input disabled>
-        </div>
-        <div>
-            <label>Weave:</label>
-            <input>
-            <label>Width(in):</label>
-            <input>
-        </div>
-        <div>
-            <label>EPI:</label>
-            <input>
-            <label>PPI:</label>
-            <input>
-            <label>No of Insertion:</label>
-            <input>
-            <label>Reed Space:</label>
-            <input>
-        </div>
-        <div>
-            <label>Shrinkage:</label>
-            <input>
-            <label>Wastage:</label>
-            <input>
-            <label>Pick Rate:</label>
-            <input>
-        </div>
-        <div>
-            <label>Sizing:</label>
-            <input>
-            <label>Transportation:</label>
-            <input>
-            <label>Packaging:</label>
-            <input>
-        </div>
-        <div>
-            <label>Rejection(%):</label>
-            <input>
-            <label>Margin(%):</label>
-            <input>
-            <label>Commission(%):</label>
-            <input>
-        </div>
-        <div>
-            <label>Interest:</label>
-            <input>
-            <label>Order Quantity(mtrs):</label>
-            <input>
-        </div>
-        <button>Submit</button>
-    </div>
+{% extends "base.html" %}
+
+{% block content %}
+<form method="POST">
+    {% csrf_token %}
+
+    {{ form.as_p }}
+    {% include 'Customer.html' %}
+    {% include 'Fabrics.html' %}
+    {% include 'Costing.html' %}
+        <button type="submit">Submit</button>
 </form>
+
+{% endblock %}

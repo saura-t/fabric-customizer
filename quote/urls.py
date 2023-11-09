@@ -5,5 +5,6 @@ from . import views
 app_name = 'quote'
 
 urlpatterns = [
-    path('', views.quote, name="Quote")
+    path('newQuote/', views.quote, name="Quote"),
+    path('costing/', views.costing, name="Costing"),
 ]

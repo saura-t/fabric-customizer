@@ -1,0 +1,11 @@
+asgiref==3.5.2
+Django==4.1
+mysql==0.0.3
+mysql-connector-python==8.1.0
+mysqlclient==2.2.0
+pip==23.3
+protobuf==4.21.12
+setuptools==68.0.0
+sqlparse==0.4.4
+tzdata==2023.3
+wheel==0.41.2
